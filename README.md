@@ -20,5 +20,24 @@
 
 
 
+ 3 - # 📇 Employee REST - Spring Boot (Java 21) Jpa:
+            HttpResponse, ExceptionHandlers, Xml/Json, Validation , H2
+            - Consumes: `application/json`, `application/xml`
+            - Produces: `application/json`, `application/xml`
 
-
+        ├─ pom.xml
+        ├─ HELP.md
+        ├─ src
+        │  ├─ main
+        │  │  ├─ java/com/ettarak
+        │  │  │  ├─ Application.java                      # Spring Boot entry point
+        │  │  │  ├─ entities/Employee.java                # JPA entity with validation
+        │  │  │  ├─ repositories/JpaEmployeeRepository.java
+        │  │  │  ├─ resources/EmployeeResource.java       # REST controller (CRUD)
+        │  │  │  ├─ services/EmployeeService.java         # Service interface
+        │  │  │  ├─ services/imp/EmployeeServiceImp.java  # Service implementation
+        │  │  │  ├─ exceptions/...                        # Global exception handler, domain exceptions
+        │  │  │  └─ utils/DateTimeFormatter.java          # Timestamp formatting utility
+        │  │  └─ resources/application.properties         # App config (port, H2, etc.)
+        │  └─ test/java/com/ettarak/ApplicationTests.java # JUnit 5 smoke test
+        └─ mvnw / mvnw.cmd                                # Maven Wrapper
